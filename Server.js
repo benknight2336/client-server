@@ -99,10 +99,3 @@ server.listen(3000, () => {
     console.log('server is up');
 });
 
-// Listen for a port to telnet to
-// then in the terminal just run 'telnet localhost [port]'
-/* server.listen(port, function() {
-
-	console.log("Server listening at http://localhost:" + port);
-
-}); */
