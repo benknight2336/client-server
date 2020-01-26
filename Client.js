@@ -1,5 +1,8 @@
-const net = require('net');        // Client Code  .
-const client = net.createConnection({ port: 3000 }, () => { // once connected .
+
+const net = require('net'); // Client Code  .
+
+const client = net.createConnection({ port: 3000 }, () => {
+
     console.log('connected to server!');
 
     process.stdin.on('data', (data) =>{
@@ -7,9 +10,13 @@ const client = net.createConnection({ port: 3000 }, () => { // once connected .
     })
 });
 client.on('data', (data) => {
+
     console.log("Msg from server: " + data.toString());
+
     // client.end();
 });
 client.on('end', () => {
+
     console.log('End of Message');
+    
 });
